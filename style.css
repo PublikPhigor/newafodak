@@ -524,7 +524,32 @@ h3 {
                     padding-bottom: 2px;
                     color: #1063A1;
                 }
-
+            .contact-form {
+                padding: 0 0 20px;
+                font-size: 1rem;
+                color: #fff;
+            }
+            .contact-form input, textarea {
+                display: block;
+                width: 100%;
+                padding: 20px 0;
+                background: none;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid #fff;
+                color: #fff;
+            }
+                .contact-form input[type=submit] {
+                    padding: 10px 20px;
+                    width: auto;
+                    background: #1063A1;
+                    border: none;
+                    transition: 0.4s;
+                }
+                .contact-form input[type=submit]:hover {
+                    background: #000;
+                    border: 1px solid #ccc;
+                }
         .foot-end {
             border-top: 1px solid #fff;
             text-align: center;
