@@ -17,7 +17,7 @@ body {
 
 .container {
     width: 95%;
-    margin: 0 auto;
+    margin: 0 auto !important;
     padding: 0;
     box-sizing: border-box;
 }
@@ -167,7 +167,7 @@ h3 {
             position: fixed;
             z-index: 998;
             top: 52px;
-            left: 0;
+            left: 100%;
             background: #000;
             transform: translateX(100%);
             transition: .6s;
@@ -175,6 +175,7 @@ h3 {
         }
             .mobile-navbar.active {
                 transform: translateX(0);
+                left: 0;
             }
             .mn-inner {
                 width: 100%;
@@ -196,15 +197,13 @@ h3 {
         margin-top: 50px;
     }
         .l1 {
-            background: url(images/B.jpeg);
-            background-size: cover;
-            background-position: center;
-            background-position-y: -30px;
-            height: 500px;
-            width: 100%;
-            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-            .l1-shade {
+            /* .l1-shade {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -212,19 +211,21 @@ h3 {
                 height: 100%;
                 background: rgba(0,0,0,0.6);
                 z-index: 1;
+            } */
+            .l1-img {
+                width: 45%;
             }
+                .l1-img img {
+                    width: 100%;
+                }
             .l1-text {
-                width: 60%;
-                overflow: hidden;
-                position: absolute;
-                z-index: 2;
-                left: 40%;
-                transform: translateY(70%);
-                color: #fff;
+                width: 50%;
+                color: #000;
                 transition: 0.4s;
             }
-                .l1-text h1, .l1-text h2 {
-                    color: #fff !important;
+                .l1-text h1 {
+                    color: #1063A1 !important;
+                    line-height: 1em !important;
                 }
             .l1 h2 {
                 font-size: .9rem;
@@ -265,22 +266,31 @@ h3 {
                 margin-right: 15px;
                 margin-top: 10px;
                 color: #fff;
+                min-width: 120px;
             }
             .btn:hover {
                 background: #000;
-                transition: .5s;
+                color: #fff;
+                transition: .4s;
             }
 @media screen and (max-width:1024px) {
-    .l1 {
-        height: 320px;
-        background-position-y: 0;
-        padding: 10px 0 0;
+    .main {
+        margin-top: 70px;
     }
+    .l1 {
+        width: 95%;
+        padding: 10px 0 0;
+        margin: 10px auto 20px;
+        flex-direction: column;
+    }
+        .l1-img {
+            width: 95%;
+            margin: 10px auto 0;
+        }
         .l1-text {
-            width: 75%;
-            left: 20%;
-            transform: translateY(15%);
+            width: 100%;
             line-height: 1.2em;
+            margin-bottom: 10px;
         }
         .l1 h1 {
             font-size: 2rem;
@@ -366,13 +376,22 @@ h3 {
             span {
                 color: #fff;
             }
-            .l3-img {
-                margin: 0 auto;
-                text-align: center;
-            }
             .l3-img img {
-                width: 400px;
+                margin: 30px auto 0;
             }
+                .pdt-bottle {
+                    width: 450px;
+                    height: 450px;
+                }
+                .pdt-sachet {
+                    width: 400px;
+                    height: 300px;
+                    margin: 100px auto 0 !important;
+                }
+                .pdt-disp {
+                    width: 300px;
+                    height: 450px;
+                }
 @media screen and (max-width:1024px) {
     .l3 {
         height: 400px;
@@ -389,10 +408,22 @@ h3 {
             .typo h1 {
                 font-size: 1.9rem;
             }
-        .l3-img img {
-            display: block;
+        .l3-img {
+            height: 300px;
+        }
+        .pdt-bottle {
+            width: 200px;
+            height: 250px;
+        }
+        .pdt-sachet {
             width: 250px;
-            margin: 0 auto;
+            height: 200px;
+            margin: 50px auto 0 !important;
+        }
+        .pdt-disp {
+            width: 185px;
+            height: 275px;
+            margin: 0 auto !important;
         }
 }
         .l4 {
@@ -484,7 +515,7 @@ h3 {
 
     #galleryCont {
         height: 80vh;
-        margin-bottom: 30px;
+        margin-bottom: 30px !important;
         overflow: hidden;
     }
         #galleryCont h3 span {
@@ -505,6 +536,11 @@ h3 {
             object-fit: cover !important;
             display: block;
         }
+@media screen and (max-width:1024px) {
+    #galleryCont {
+        height: auto;
+    }
+}
 
     footer {
         background: #000000;
@@ -556,7 +592,7 @@ h3 {
             .contact-form input, textarea {
                 display: block;
                 width: 100%;
-                padding: 20px 0;
+                padding: 10px 0;
                 background: none;
                 outline: none;
                 border: none;
@@ -618,5 +654,3 @@ h3 {
             font-size: .7rem;
         }
 }
-
-                    
