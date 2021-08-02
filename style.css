@@ -197,21 +197,24 @@ h3 {
         margin-top: 50px;
     }
         .l1 {
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
             align-items: center;
+            background-image: url('images/B.jpeg');
+            background-position: center;
+            background-position-y: -200px;
+            height: 500px;
+            position: relative;
         }
-            /* .l1-shade {
+            .l1-shade {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0,0,0,0.6);
+                background: rgba(0,0,0,0.4);
                 z-index: 1;
-            } */
+            }
             .l1-img {
                 width: 45%;
             }
@@ -222,9 +225,13 @@ h3 {
                 width: 50%;
                 color: #000;
                 transition: 0.4s;
+                position: absolute;
+                left: 40%;
+                top: 25%;
+                z-index: 2;
             }
                 .l1-text h1 {
-                    color: #1063A1 !important;
+                    color: #fff;
                     line-height: 1em !important;
                 }
             .l1 h2 {
@@ -237,12 +244,12 @@ h3 {
             }
             .l1 p {
                 font-size: 1rem;
+                color: #fff !important;
             }
                 .style-list {
                     margin: 5px 0 20px;
                 }
                     .style-list li {
-                        padding-left: 20px;
                         list-style-type: disc;
                     }
                     .style-list a {
@@ -275,26 +282,32 @@ h3 {
             }
 @media screen and (max-width:1024px) {
     .main {
-        margin-top: 70px;
+        margin-top: 50px;
     }
     .l1 {
-        width: 95%;
+        width: 100%;
         padding: 10px 0 0;
         margin: 10px auto 20px;
         flex-direction: column;
+        height: 350px;
+        background-position-y: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
-        .l1-img {
-            width: 95%;
-            margin: 10px auto 0;
+        .l1-shade {
+            background: rgba(0,0,0,0.7);
         }
         .l1-text {
-            width: 100%;
+            width: 95%;
             line-height: 1.2em;
             margin-bottom: 10px;
+            left: 5%;
+            top: 20%;
         }
         .l1 h1 {
             font-size: 2rem;
             line-height: 1em;
+            color: #fff !important;
         }
         .l1-btn .btn, .btn {
             font-size: .9rem;
@@ -344,7 +357,7 @@ h3 {
             padding: 0 10px;
         }
             .l2-box1 h1 {
-                font-size: 1.7rem;
+                font-size: 1.3rem;
                 line-height: 1.3em;
             }
             .l2-box1 h2 {
@@ -352,7 +365,7 @@ h3 {
                 line-height: 1.3em;
             }
             .l2-box1 h3 {
-                font-size: 1.1rem;
+                font-size: .9rem;
             }
 }
 
@@ -380,17 +393,7 @@ h3 {
                 margin: 30px auto 0;
             }
                 .pdt-bottle {
-                    width: 450px;
-                    height: 450px;
-                }
-                .pdt-sachet {
                     width: 400px;
-                    height: 300px;
-                    margin: 100px auto 0 !important;
-                }
-                .pdt-disp {
-                    width: 300px;
-                    height: 450px;
                 }
 @media screen and (max-width:1024px) {
     .l3 {
@@ -414,16 +417,6 @@ h3 {
         .pdt-bottle {
             width: 200px;
             height: 250px;
-        }
-        .pdt-sachet {
-            width: 250px;
-            height: 200px;
-            margin: 50px auto 0 !important;
-        }
-        .pdt-disp {
-            width: 185px;
-            height: 275px;
-            margin: 0 auto !important;
         }
 }
         .l4 {
@@ -652,5 +645,8 @@ h3 {
         }
         .foot-end p {
             font-size: .7rem;
+        }
+        .contact-form input, textarea {
+            padding: 20px 0;
         }
 }
